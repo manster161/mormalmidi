@@ -19,7 +19,7 @@ const mormalmidi = {
         // Custom simple logger
         const logger = new Console({ stdout: output, stderr: errorOutput });
         
-        for (var i = 0; i < count; i++){
+        for (i = 0; i < count; i++){
            logger.log(input.getPortName(i));
         }
         
