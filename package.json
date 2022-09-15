@@ -1,0 +1,24 @@
+{
+  "name": "mormalmidi",
+  "version": "1.0.0",
+  "description": "Mormal midi contoller/hub",
+  "main": "mormalmidi.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manster161/mormalmidi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manster161/mormalmidi/issues"
+  },
+  "homepage": "https://github.com/manster161/mormalmidi#readme",
+  "dependencies": {
+    "config": "^3.3.8",
+    "midi": "^2.0.0"
+  }
+}

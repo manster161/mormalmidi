@@ -1,0 +1,9 @@
+{
+    "midi": {
+        "port": 0
+    },
+    "logging": {
+        "std": "./stdout.log",
+        "err": "./stderr.log"
+    }
+}
