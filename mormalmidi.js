@@ -7,15 +7,15 @@ const portNum = config.get('midi.port');
 
 const mormalmidi = {
      init : function (){
-        console.log(`midi port from config ${config.midi.port}`);
+        console.log(`midi port from config ${config.mormalmidi.midi.port}`);
 
         var portName = "";
         const input = new midi.Input(); 
         
         var count = input.getPortCount();
         
-        const output = fs.createWriteStream(config.get('logging.std'));
-        const errorOutput = fs.createWriteStream(config.get('logging.err'));
+        const output = fs.createWriteStream(config.get('mormalmidi.logging.std'));
+        const errorOutput = fs.createWriteStream(config.get('mormalmidi.logging.err'));
         // Custom simple logger
         const logger = new Console({ stdout: output, stderr: errorOutput });
         
@@ -24,6 +24,9 @@ const mormalmidi = {
         }
         
         input.on('message', (_, message) => {
+            if (config.get('logging.debug')){
+                console.log(message)
+            }
             hub.newMessage(message);
         })
         
