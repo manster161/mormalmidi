@@ -1,5 +1,6 @@
 const mapping = new Map();
-var midihub = {
+const midihub = {
+    
     addMapping: function (ccvalue, callback){
         mapping.set(ccvalue, callback);
     },
